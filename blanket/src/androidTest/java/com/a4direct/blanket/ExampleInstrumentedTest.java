@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.a4direct.blanket", appContext.getPackageName());
+        assertEquals("com.a4direct.blanket.test", appContext.getPackageName());
     }
 }
