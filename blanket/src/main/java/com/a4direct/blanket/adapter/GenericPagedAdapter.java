@@ -4,26 +4,23 @@ import android.arch.paging.PagedListAdapter;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v7.recyclerview.extensions.DiffCallback;
+import android.support.v7.util.DiffUtil;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.a4direct.blanket.adapter.base.BaseHolder;
-import com.a4direct.blanket.adapter.base.BaseListener;
-import com.a4direct.blanket.adapter.base.BaseObject;
-import com.a4direct.blanket.adapter.base.Destroy;
+import com.a4direct.blanket.Destroy;
 
 /**
  * Created by Jyothi Asapu on 25-01-2018.
  */
 
-public abstract class GenericAdapter<E extends BaseObject, L extends BaseListener, VH extends BaseHolder<E, L>>
+public abstract class GenericPagedAdapter<E extends BaseObject, L extends BaseListener, VH extends BaseHolder<E, L>>
         extends PagedListAdapter<E, VH> implements Destroy {
 
     private L mListener;
 
-    public GenericAdapter() {
+    public GenericPagedAdapter() {
         super(new Callback<E>());
     }
 
@@ -43,7 +40,7 @@ public abstract class GenericAdapter<E extends BaseObject, L extends BaseListene
         this.mListener = listener;
     }
 
-    public static final class Callback<E extends BaseObject> extends DiffCallback<E> {
+    public static final class Callback<E extends BaseObject> extends DiffUtil.ItemCallback<E> {
 
         @Override
         public boolean areItemsTheSame(@NonNull E oldItem, @NonNull E newItem) {

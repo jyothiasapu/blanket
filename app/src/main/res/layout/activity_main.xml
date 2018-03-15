@@ -9,7 +9,7 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.a4direct.sample.MainActivity">
+        tools:context="com.a4direct.sample.ViewPagerActivity">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view"

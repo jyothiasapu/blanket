@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/feedback"
+            android:icon="@drawable/ic_feedback_black_24dp"
+            android:title="@string/description" />
+        <item
+            android:id="@+id/feedback_list"
+            android:icon="@drawable/ic_format_list_bulleted_black_24dp"
+            android:title="@string/feedback_list" />
+
+        <item
+            android:id="@+id/info_activity"
+            android:icon="@drawable/ic_format_list_bulleted_black_24dp"
+            android:title="@string/info_activity" />
+    </group>
+
+</menu>

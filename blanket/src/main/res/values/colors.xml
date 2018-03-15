@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="circle_indicator_fill_color">#FFFFFF</color>
+    <color name="circle_indicator_page_color">#000000</color>
+    <color name="circle_indicator_stroke_color">#DB7093</color>
+
+</resources>

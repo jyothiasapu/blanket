@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/root_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.a4direct.template.infowidget.InfoActivity">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/linear_layout_indicator"
+            android:clipChildren="false"
+            android:clipToPadding="false" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/linear_layout_indicator"
+            android:background="#E0E0E0" />
+
+        <RelativeLayout
+            android:id="@+id/linear_layout_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <com.a4direct.blanket.indicator.PageIndicator
+                android:id="@+id/view_page_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:minHeight="24dp"
+                app:fillColor="@color/circle_indicator_stroke_color"
+                app:pageColor="@color/circle_indicator_fill_color"
+                app:radius="6dp"
+                app:strokeColor="@color/circle_indicator_stroke_color"
+                app:strokeWidth="0dp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

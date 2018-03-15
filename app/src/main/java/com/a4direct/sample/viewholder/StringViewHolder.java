@@ -1,17 +1,19 @@
-package com.a4direct.sample;
+package com.a4direct.sample.viewholder;
 
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.TextView;
 
-import com.a4direct.blanket.adapter.base.BaseHolder;
-import com.a4direct.blanket.adapter.base.OnItemClickListener;
+import com.a4direct.blanket.adapter.BaseHolder;
+import com.a4direct.blanket.adapter.BaseOnClickListener;
+import com.a4direct.sample.R;
+
 
 /**
- * Created by Jyothi Asapu on 5/3/18.
+ * Created by Jyothi Asapu on 11-03-2018.
  */
 
-public class StringViewHolder extends BaseHolder<String, OnItemClickListener<String>> {
+public class StringViewHolder extends BaseHolder<String, BaseOnClickListener<String>> {
 
     private TextView mTextView;
 
@@ -22,7 +24,7 @@ public class StringViewHolder extends BaseHolder<String, OnItemClickListener<Str
     }
 
     @Override
-    public void bindItem(final String item, @Nullable final OnItemClickListener<String> listener) {
+    public void bindItem(final String item, @Nullable final BaseOnClickListener<String> listener) {
         mTextView.setText(item);
 
         if (listener == null) {
@@ -37,9 +39,6 @@ public class StringViewHolder extends BaseHolder<String, OnItemClickListener<Str
                 }
             }
         });
-
-        // TODO: add long click listener
-
     }
 
     @Override
