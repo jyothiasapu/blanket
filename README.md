@@ -7,11 +7,21 @@ If anywant to use this library in their project, Please include the below depend
     
 root directory -> build.gradle:
 
-    // Add repository  
-    dependencies {
+buildscript {
+    repositories {
         .....
         maven { url 'https://jitpack.io' }
     }
+}
+
+allprojects {
+    repositories {
+        ....
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+  
 
 
 This application contains below code:
